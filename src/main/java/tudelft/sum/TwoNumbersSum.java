@@ -25,6 +25,10 @@ class TwoNumbersSum {
             result.add(i, total);
         }
 
+        if (complement > 0){
+            result.add(result.size(), 1);
+        }
+
         Collections.reverse(result);
         return result;
     }

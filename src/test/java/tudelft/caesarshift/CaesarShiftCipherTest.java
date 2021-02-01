@@ -21,4 +21,10 @@ public class CaesarShiftCipherTest {
         String result = caesar.CaesarShiftCipher("ABC", 3);
         Assertions.assertEquals("invalid", result);
     }
+
+    @Test
+    public void notNull(){
+        CaesarShiftCipher caesar = new CaesarShiftCipher();
+        Assertions.assertThrows(NullPointerException.class, () -> caesar.CaesarShiftCipher(null, 0));
+    }
 }
